@@ -2,21 +2,21 @@ const express = require('express'),
       mongoose = require('mongoose'),
       methodOverride = require('method-override'),
       morgan = require('morgan'),
+      secret = require('./config/secret'),
       bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(morgan('common'));
-mongoose.connect('mongodb://localhost/udemy_clone', {
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+mongoose.connect(secret.database, {
     useNewUrlParser: true
 });
 
-bodyParser.urlencoded({extended: true});
+require('./routes/main')(app);
 
-app.get('/', (req, res)=>{
-    res.send('Welcome');
-});
-
-app.listen(3000, ()=>{
-    console.log("App is on port 3000");
+app.listen(secret.port, ()=>{
+    console.log("App is on port " + secret.port);
 })
