@@ -1,0 +1,17 @@
+{
+  "name": "Udemy_clone",
+  "version": "1.0.0",
+  "description": "A Clone of the popular eLearning Management Platform",
+  "main": "app.js",
+  "repository": "https://github.com/Xcode001/Udemy_clone.git",
+  "author": "Musa Musa <musamusa739@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.6",
+    "morgan": "^1.9.1"
+  }
+}
