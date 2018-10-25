@@ -1,5 +1,5 @@
 {
-  "name": "Udemy_clone",
+  "name": "udemy_clone",
   "version": "1.0.0",
   "description": "A Clone of the popular eLearning Management Platform",
   "main": "app.js",
@@ -9,6 +9,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
+    "ejs-mate": "^2.3.0",
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.6",
